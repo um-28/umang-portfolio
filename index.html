@@ -5,32 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Patel Umang | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Patel Umang</h1>
-    <p>Backend Developer | Flutter Expert | Laravel | API Integration</p>
+
+  <nav class="navbar">
+    <div class="logo">Umang</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="darkModeToggle">🌙</button></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container">
+      <h1>Hi, I'm <span>Patel Umang</span></h1>
+      <p>Backend Developer | Flutter Expert | Laravel | API Integration</p>
+      <a href="#contact" class="btn">📩 Hire Me</a>
+    </div>
   </header>
 
-  <section class="projects">
-    <div class="project-card fade-in">
-      <h2>Carmitra</h2>
-      <p>A car service booking platform using Flutter + Laravel.</p>
+  <section id="about" class="fade-in">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I’m passionate about blending backend precision with mobile UI finesse. I build premium apps and APIs using modern tech stacks like Flutter, Laravel, and Django. I love transforming ideas into real-world applications.</p>
     </div>
+  </section>
 
-    <div class="project-card fade-in">
-      <h2>MarryMate</h2>
-      <p>A community-based matrimonial system built with Flutter + Django.</p>
+  <section id="skills" class="fade-in">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skill-icons">
+        <span><i class="fab fa-laravel"></i> Laravel</span>
+        <span><i class="fab fa-android"></i> Flutter</span>
+        <span><i class="fas fa-server"></i> APIs</span>
+        <span><i class="fas fa-credit-card"></i> Razorpay</span>
+        <span><i class="fas fa-database"></i> MySQL</span>
+        <span><i class="fas fa-cloud"></i> REST APIs</span>
+      </div>
     </div>
+  </section>
 
-    <div class="project-card fade-in">
-      <h2>Maid & Health Services</h2>
-      <p>Home service app with Razorpay payments & admin panel.</p>
+  <section id="projects" class="fade-in">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="project-card">
+        <h3>🚘 Carmitra</h3>
+        <p>A car service booking platform using Flutter + Laravel.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>💍 MarryMate</h3>
+        <p>Community-based matrimonial system built with Flutter + Django.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>🧹 Maid & Health Services</h3>
+        <p>Home service app with Razorpay payment and admin panel.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <div class="container">
+      <h2>Contact</h2>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:patelumang1122@gmail.com">patelumang1122@gmail.com</a></p>
+      <p><i class="fas fa-phone"></i> +91 63541 69285</p>
+      <p><i class="fab fa-github"></i> <a href="https://github.com/um-28" target="_blank">github.com/um-28</a></p>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Umang | <a href="mailto:patelumang1122@gmail.com">Email Me</a> | 📱 6354169285</p>
+    <p>© 2025 Patel Umang | Crafted with 💙</p>
   </footer>
 
   <script src="script.js"></script>
