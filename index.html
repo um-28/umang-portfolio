@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Patel Umang | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -15,105 +15,130 @@
     }
 
     body {
-      background: #f4f4f4;
-      color: #333;
+      background: #fff;
+      color: #222;
+      line-height: 1.6;
+      font-weight: 400;
       transition: all 0.3s ease-in-out;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    main {
+      max-width: 720px;
+      width: 100%;
     }
 
     header {
-      background: linear-gradient(to right, #ffffff, #e4e4e4);
-      padding: 2rem;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 1.2s ease-in-out;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #eee;
     }
 
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #0077ff;
-      margin-bottom: 1rem;
-      animation: popIn 1s ease;
-    }
-
-    h1 {
-      font-size: 2rem;
-      color: #222;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: #555;
-    }
-
-    .section {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-      animation: slideUp 1s ease;
-    }
-
-    .section h3 {
-      margin-bottom: 1rem;
+    header h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
       color: #0077ff;
-      font-size: 1.5rem;
-    }
-
-    .about p,
-    .skills ul,
-    .contact p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #444;
-    }
-
-    .skills ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .skills li {
-      margin-bottom: 0.5rem;
-    }
-
-    .projects ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .projects li {
-      margin-bottom: 1rem;
-      padding: 1rem;
-      background: #fff;
-      border-left: 4px solid #0077ff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .projects li h4 {
       margin-bottom: 0.3rem;
+    }
+
+    header h2 {
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: #555;
+      font-style: italic;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0077ff;
+      margin-bottom: 1rem;
+      border-left: 4px solid #0077ff;
+      padding-left: 0.75rem;
+    }
+
+    p,
+    li {
+      font-size: 1rem;
       color: #333;
     }
 
-    .projects li p {
-      font-size: 0.95rem;
-      color: #666;
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #0077ff;
+      font-weight: bold;
+    }
+
+    .projects li {
+      background: #f9faff;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 119, 255, 0.1);
+      margin-bottom: 1rem;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .projects li:hover {
+      box-shadow: 0 8px 12px rgba(0, 119, 255, 0.2);
+    }
+
+    .projects li h4 {
+      color: #005fcc;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: #0077ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #005fcc;
+    }
+
+    .contact p {
+      margin-bottom: 0.5rem;
     }
 
     .socials {
-      margin-top: 2rem;
-      text-align: center;
-      animation: fadeIn 1.5s ease;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
     }
 
     .socials a {
-      margin: 0 0.5rem;
-      text-decoration: none;
       color: #0077ff;
-      font-weight: 500;
-      transition: color 0.3s;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
     }
 
     .socials a:hover {
@@ -121,97 +146,126 @@
     }
 
     footer {
-      background: #eee;
-      padding: 1rem;
+      margin-top: auto;
+      padding: 1rem 0;
+      width: 100%;
+      max-width: 720px;
       text-align: center;
       font-size: 0.9rem;
-      color: #555;
+      color: #666;
+      border-top: 1px solid #eee;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes popIn {
-      from {
-        transform: scale(0.8);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideUp {
-      from {
-        transform: translateY(20px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+    /* Icon styles */
+    .icon {
+      vertical-align: middle;
+      margin-right: 0.3rem;
+      fill: currentColor;
+      height: 18px;
+      width: 18px;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" alt="Profile Picture">
-    <h1>Patel Umang Shaileshbhai</h1>
-    <h2>Backend Developer | Flutter Developer | API Integration | Clean Mobile UI</h2>
-  </header>
+  <main>
+    <header>
+      <h1>Patel Umang Shaileshbhai</h1>
+      <h2>Backend Developer | Flutter Developer | API Integration | Clean Mobile UI</h2>
+    </header>
 
-  <div class="section about">
-    <h3>About Me</h3>
-    <p>I am a passionate Backend and Flutter Developer who loves creating clean, fast, and scalable mobile and web applications. With a strong focus on modern UI and seamless API integrations, I aim to deliver smooth digital experiences.</p>
-  </div>
+    <section class="about">
+      <h3>About Me</h3>
+      <p>
+        I am a passionate Backend and Flutter Developer focused on crafting clean, fast, and scalable mobile and web
+        applications. With strong expertise in modern UI and seamless API integrations, I strive to deliver smooth
+        digital experiences.
+      </p>
+    </section>
 
-  <div class="section skills">
-    <h3>Skills</h3>
-    <ul>
-      <li>Backend Development (Laravel / Django)</li>
-      <li>Flutter App Development</li>
-      <li>RESTful API Integration</li>
-      <li>Clean Responsive UI Design</li>
-    </ul>
-  </div>
+    <section class="skills">
+      <h3>Skills</h3>
+      <ul>
+        <li>Backend Development (Laravel, Django)</li>
+        <li>Flutter App Development</li>
+        <li>RESTful API Integration</li>
+        <li>Clean & Responsive UI Design</li>
+      </ul>
+    </section>
 
-  <div class="section projects">
-    <h3>Projects</h3>
-    <ul>
-      <li>
-        <h4>CareMitra App</h4>
-        <p>A health care and support service mobile app developed using Flutter and Laravel API backend. Provides medical appointment booking, patient profiles, and emergency contacts.</p>
-      </li>
-      <li>
-        <h4>MarryMate App</h4>
-        <p>Wedding planner and vendor booking platform built with Flutter frontend and Laravel backend. Includes wedding hall bookings, decorators, salon, and vendor availability features.</p>
-      </li>
-    </ul>
-  </div>
+    <section class="projects">
+      <h3>Projects</h3>
+      <ul>
+        <li>
+          <h4>CareMitra App</h4>
+          <p>
+            A healthcare support service app developed with Flutter frontend and Laravel backend APIs. Features include
+            medical appointment booking, patient profiles, and emergency contacts for seamless healthcare assistance.
+          </p>
+        </li>
+        <li>
+          <h4>MarryMate App</h4>
+          <p>
+            A wedding planner and vendor booking platform built using Flutter and Laravel API backend. Includes
+            wedding hall bookings, decorators, salon services, vendor availability management, and clean UI experience.
+          </p>
+        </li>
+        <li>
+          <h4>Laravel API Projects</h4>
+          <p>
+            Developed multiple RESTful APIs using Laravel framework to handle user authentication, vendor management,
+            bookings, and data integration for mobile and web applications.
+          </p>
+        </li>
+        <li>
+          <h4>Flutter Projects</h4>
+          <p>
+            Created feature-rich Flutter applications with custom UI components, smooth animations, and efficient API
+            integrations for scalable mobile apps.
+          </p>
+        </li>
+      </ul>
+    </section>
 
-  <div class="section contact">
-    <h3>Contact</h3>
-    <p>Mobile: 6354169286</p>
-    <p>Email: <a href="mailto:patelumang1122@gmail.com">patelumang1122@gmail.com</a></p>
-  </div>
+    <section class="contact">
+      <h3>Contact</h3>
+      <p>Mobile: <a href="tel:+916354169286">+91 63541 69286</a></p>
+      <p>Email: <a href="mailto:patelumang1122@gmail.com">patelumang1122@gmail.com</a></p>
+    </section>
 
-  <div class="socials">
-    <a href="https://github.com/" target="_blank">GitHub</a>
-    <a href="https://instagram.com/" target="_blank">Instagram</a>
-    <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-  </div>
+    <section class="socials">
+      <a href="https://linkedin.com/in/patelumang" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <!-- LinkedIn SVG Icon -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.97 0-1.75-.79-1.75-1.75S5.53 4.25 6.5 4.25s1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.32-1.08-2.4-2.4-2.4s-2.4 1.08-2.4 2.4v5.5h-3v-10h3v1.25c.7-1.02 2.2-1.25 3.3-1.25 2.48 0 4.5 2.02 4.5 4.5v5.5z" />
+        </svg>
+        LinkedIn
+      </a>
+      <a href="https://drive.google.com/file/d/your_resume_link_here/view" target="_blank" rel="noopener noreferrer"
+        aria-label="Resume">
+        <!-- Resume Icon (simple doc icon) -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm9 1.5v4a1.5 1.5 0 0 0 1.5 1.5h4l-5.5-5.5zM8 11h8v2H8v-2zm0 4h8v2H8v-2z" />
+        </svg>
+        Resume
+      </a>
+      <a href="https://github.com/patelumang" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <!-- GitHub Icon -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.29 3.438 9.779 8.205 11.363.6.111.82-.261.82-.58 0-.287-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.083-.73.083-.73 1.204.084 1.838 1.238 1.838 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.76-1.604-2.665-.305-5.466-1.335-5.466-5.933 0-1.31.467-2.38 1.235-3.22-.123-.303-.535-1.527.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 0 1 3-.404c1.02.005 2.047.138 3 .404 2.29-1.553 3.296-1.23 3.296-1.23.653 1.65.24 2.873.12 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.625-5.48 5.922.43.372.81 1.103.81 2.222 0 1.604-.015 2.896-.015 3.293 0 .32.216.694.825.576C20.565 22.275 24 17.79 24 12.5 24 5.87 18.627.5 12 .5z" />
+        </svg>
+        GitHub
+      </a>
+    </section>
 
-  <footer>
-    &copy; 2025 Patel Umang | All rights reserved.
-  </footer>
+    <footer>
+      &copy; 2025 Patel Umang | All rights reserved.
+    </footer>
+  </main>
 </body>
 
 </html>
+
