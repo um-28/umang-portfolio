@@ -2,11 +2,9 @@
   --bg1: #030712;
   --bg2: #0f172a;
   --accent: #3b82f6;
-  --accent2: #a855f7;
 }
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -33,11 +31,12 @@ body {
 }
 
 .glass-nav {
-  background: rgba(2, 6, 23, 0.65);
+  background: rgba(2, 6, 23, 0.72);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(148, 163, 184, 0.2);
 }
 
+.navbar-brand { letter-spacing: 0.4px; }
 .nav-link { color: #dbeafe; }
 .nav-link:hover { color: #93c5fd; }
 
@@ -46,6 +45,11 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.typed-line {
+  font-weight: 600;
+  color: #bfdbfe;
 }
 
 .hero {
@@ -108,7 +112,8 @@ body {
 
 .skill-chip,
 .glass-card,
-.contact-box {
+.contact-box,
+.timeline-item {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(15, 23, 42, 0.65);
   backdrop-filter: blur(10px);
@@ -138,6 +143,20 @@ body {
   font-size: .75rem;
   padding: .2rem .6rem;
   color: #bfdbfe;
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline-item {
+  padding: 1rem 1.1rem;
+}
+
+.timeline-item h4 {
+  margin-bottom: .35rem;
+  color: #93c5fd;
 }
 
 .contact-box { padding: 1.4rem; }
